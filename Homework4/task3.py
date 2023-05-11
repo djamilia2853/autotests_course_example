@@ -7,7 +7,11 @@
 # 4 --> 4
 
 def sum_digits(num):
-    # Здесь нужно написать код
+    if num < 10:
+        return num
+    else:
+        our_sum = num % 10 + sum_digits(num // 10)
+        print(our_sum)
     return our_sum
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ

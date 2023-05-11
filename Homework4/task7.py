@@ -3,7 +3,14 @@
 # [1, 0, 1, 2, 0, 1, 3]  => [1, 1, 2, 1, 3, 0, 0]
 
 def move_zeros(lst):
-    # Здесь нужно написать код
+    list0 = []
+    list1 = []
+    for num in lst:
+        if num == 0:
+            list0.append(num)
+        else:
+            list1.append(num)
+    lst = list1 + list0
     return lst
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
