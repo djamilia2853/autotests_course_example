@@ -8,9 +8,8 @@
 def flatten_and_sort(array):
     result_list = []
     for sublist in array:
-        for item in sublist:
-            result_list.append(item)
-            result_list.sort()
+        result_list.extend(sublist)
+        result_list.sort()
     return result_list
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ

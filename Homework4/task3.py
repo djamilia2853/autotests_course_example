@@ -8,10 +8,9 @@
 
 def sum_digits(num):
     if num < 10:
-        return num
+        our_sum = num
     else:
         our_sum = num % 10 + sum_digits(num // 10)
-        print(our_sum)
     return our_sum
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
