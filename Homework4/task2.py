@@ -9,7 +9,7 @@ def flatten_and_sort(array):
     result_list = []
     for sublist in array:
         result_list.extend(sublist)
-        result_list.sort()
+    result_list.sort()
     return result_list
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ

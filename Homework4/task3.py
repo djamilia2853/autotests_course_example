@@ -7,10 +7,10 @@
 # 4 --> 4
 
 def sum_digits(num):
-    if num < 10:
-        our_sum = num
-    else:
-        our_sum = num % 10 + sum_digits(num // 10)
+    our_sum = 0
+    while num >= 1:
+        our_sum += num % 10
+        num = num // 10
     return our_sum
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
