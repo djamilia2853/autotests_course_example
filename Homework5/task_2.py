@@ -8,19 +8,17 @@
 
 def repeats(our_str):
     """
-        Функция repeats, которая принимает на вход строку our_str,
-        смотрит, сколько раз каждый символ уже встречался, и добавляет количество к символам с помощью постфикса формата _n.
-        Возвращается новая строка
-        :param our_str: принимаемая на вход строка
-        :return: возвращается новая строка new_str
-        """
+    Функция выводит сколько раз встречается буква в слове
+    :param our_str: строка
+    :return: новая строка, в виде буква_число (в который раз встречается)
+    """
     new_dict = {}
     new_str = ''
     for letter in our_str:
-        if letter not in new_dict:
-            new_dict[letter] = 1
-        else:
+        if letter in new_dict:
             new_dict[letter] += 1
+        else:
+            new_dict[letter] = 1
         new_str = f'{new_str}{letter}_{new_dict.get(letter)}'
     return new_str
 
