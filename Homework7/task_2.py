@@ -26,21 +26,20 @@ from collections import Counter
 
 class PersonInfo:
 
-    def __init__(self, name_surname: str, age: int, *department):
-        self.name_surname = name_surname
+    def __init__(self, name: str, age: int, *department):
+        self.name = name
         self.age = age
         self.department = department
 
     def short_name(self):
         """
-        Функция получает строку "Имя Фамилия"
         :return: строка в формате "Фамилия И."
         """
-        return f"{self.name_surname.split(' ')[-1]} {self.name_surname.split(' ')[0][0]}."
+        first_name, surname = self.name.split()
+        return f"{surname} {first_name[0]}."
 
     def path_deps(self):
         """
-        Получает список Подразделения от головного до того, где работает сотрудник
         :return: путь "Головное подразделение --> ... --> Конечное подразделение"
         """
         return ' --> '.join(self.department)

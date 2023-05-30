@@ -37,7 +37,7 @@ class PublicTransport:
         """
         :return: информация о: марке, цвете, годе выпуска и мощности двигателя
         """
-        return (f'Brand: {self.brand} Color: {self.color} Year: {self.year} Power: {self._engine_power}')
+        return f'Brand: {self.brand} Color: {self.color} Year: {self.year} Power: {self._engine_power}'
 
 class Bus(PublicTransport):
 
@@ -52,14 +52,14 @@ class Bus(PublicTransport):
         """
         :return: парк приписки автобуса
         """
-        return self.park
+        return self.__park
 
     @park.setter
     def park(self, value):
         """
         проверяет, что номер парка в диапазоне от 1000 до 9999
         """
-        assert 1000 <= value <= 9999
+        assert 1000 <= value <= 9999, 'Проверка на ограничение диапазона НЕ пройдена'
         self.__park = value
 
 class Tram(PublicTransport):
