@@ -12,17 +12,15 @@
 class Segment:
 
     def __init__(self, point1, point2):
-        self.point1 = point1
-        self.point2 = point2
+        self.x1, self.y1 = point1
+        self.x2, self.y2 = point2
 
     def length(self):
         """
         длина отрезка
         :return: длина отрезка, с округлением до 2 знаков после запятой
         """
-        x1, y1 = self.point1
-        x2, y2 = self.point2
-        length = ((x1 - x2) ** 2 + (y1 - y2) ** 2) ** 0.5
+        length = ((self.x1 - self.x2) ** 2 + (self.y1 - self.y2) ** 2) ** 0.5
         return round(length, 2)
 
     def x_axis_intersection(self):
@@ -30,18 +28,14 @@ class Segment:
         пересечение с осью
         :return: True, если отрезок пересекает ось абцисс, иначе False
         """
-        x1, y1 = self.point1
-        x2, y2 = self.point2
-        return y1 <= 0 <= y2 or y1 >= 0 >= y2
+        return self.y1 <= 0 <= self.y2 or self.y1 >= 0 >= self.y2
 
     def y_axis_intersection(self):
         """
         пересечение с осью
         :return: True, если отрезок пересекает ось ординат, иначе False
         """
-        x1, y1 = self.point1
-        x2, y2 = self.point2
-        return x1 <= 0 <= x2 or x1 >= 0 >= x2
+        return self.x1 <= 0 <= self.x2 or self.x1 >= 0 >= self.x2
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
 

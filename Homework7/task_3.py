@@ -59,7 +59,7 @@ class Bus(PublicTransport):
         """
         проверяет, что номер парка в диапазоне от 1000 до 9999
         """
-        assert 1000 <= value <= 9999, 'Проверка на ограничение диапазона НЕ пройдена'
+        assert 1000 <= value <= 9999, 'Номер парка не входит в диапазон от 1000 до 9999'
         self.__park = value
 
 class Tram(PublicTransport):
