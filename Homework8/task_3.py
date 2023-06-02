@@ -15,9 +15,11 @@ def segment(point_1: tuple, point_2: tuple):
     :return: сумма всех координат, в случае исключения возвращает текст исключения задом наперед
     """
     try:
-        return point_1[0] + point_1[1] + point_2[0] + point_2[1]
+        res = point_1[0] + point_1[1] + point_2[0] + point_2[1]
     except Exception as error:
-        return error.args[0][-1::-1]
+        res = error.args[0][-1::-1]
+    return res
+
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
 

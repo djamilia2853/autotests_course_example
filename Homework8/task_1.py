@@ -20,19 +20,18 @@ def treatment_sum(our_tuple: tuple):
     """
     Сумма двух элементов.
     :param our_tuple: Кортеж с элементами
-    :return: (summ) Сумма элементов, если в кортеже два элемента, иначе возвращает соответствующее исключение
+    :return: Сумма элементов, если в кортеже два элемента, иначе возвращает соответствующее исключение
     """
     try:
         summ = our_tuple[0] + our_tuple[1]
     except TypeError:
-        return 'Нельзя сложить эти данные'
+        summ = 'Нельзя сложить эти данные'
     except IndexError:
-        return 'Недостаточно данных'
+        summ = 'Недостаточно данных'
+    if len(our_tuple) > 2:
+        raise Exception('Много данных')
     else:
-        if len(our_tuple) > 2:
-            raise Exception('Много данных')
-        else:
-            return summ
+        return summ
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
 
