@@ -18,10 +18,12 @@ import unittest  # Не удалять
 
 class Trigon:
     """
-    Треугольник. Проверяет, является ли переданная фигура треугольником
-    :param args: Стороны треугольника
+    Треугольник
     """
     def __init__(self, *args):
+        """
+        :param args: Стороны треугольника
+        """
         if len(args) != 3:
             raise IndexError(f'Передано {len(args)} аргументов, а ожидается 3')
         if not(isinstance(args[0], int)) or not(isinstance(args[1], int)) or not(isinstance(args[2], int)):
