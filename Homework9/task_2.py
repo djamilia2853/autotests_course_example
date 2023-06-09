@@ -46,6 +46,7 @@ def func_log(file_log=r'test_file\log.txt'):
                 current_time = datetime.datetime.now()
                 format_current_time = current_time.strftime('%d.%m %H:%M:%S')
                 file.writelines(f'{funk_name.__name__} вызвана {format_current_time}\n')
+            funk_name()
         return wrapper
     return name
 
