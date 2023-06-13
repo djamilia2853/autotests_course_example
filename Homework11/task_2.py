@@ -118,7 +118,7 @@ try:
                                           '[data-qa="msg-dialogs-item__addressee"]')
     sender_txt = sender.text
     assert name_user != sender_txt.split(" ")[0] \
-           or message_txt != message_sender, f"ожидали что верхне сообщение отличается отправителем или текстом:" \
+           or message_txt != message_sender, f"ожидали что верхнее сообщение отличается отправителем или текстом:" \
                                              f"не должен быть отправитель: '{name_user}'\n" \
                                              f"текст: '{sender_txt}'"
 
